@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Home - The Kitchen Oracle{% endblock %}
+{% block content %}
+  <!-- Flash Messages -->
+  
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="alert-container">
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+  
+    {% endif %}
+    {% endwith %}
+</div>
+<div class="container-fluid">
+  <div id="tagline" class="gupter-regular"><b>
+    "Discover Delicious Recipes with What You Have!"</b>
+    <h4>A smart recipe finder that turns your ingredients into culinary delights!</h4>
+  </div>
+  
+ 
+    <div class="container">
+      <form action="/search" method="POST">
+
+        <label for="ingredients">Enter Ingredients (comma-separated):</label><br>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g., tomato, onion, garlic" required><br>
+        <button type="submit" class="btn btn-warning"><b>Find Recipes</b></button>
+
+      </form>
+
+      <div class="drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+      </div>
+   
+    </div>
+    
+
+   
+      <div class="card-container">
+        <!-- Italian Cuisine -->
+        <div class="card">
+          <div class="overlay red-overlay">
+            <div class="text-content">
+              <h4>Experience the Taste of Italy</h4>
+              <h2>Italian Cuisine</h2>
+              <p>
+                Indulge in classic Italian dishes like creamy pastas, wood-fired pizzas, and decadent desserts. Our Italian recipes bring authentic flavors straight to your kitchen, perfect for any occasion!
+              </p>
+       
+            </div>
+          </div>
+          <img src="/static/images/italian.jpeg" alt="Italian Cuisine">
+        </div>
+        &nbsp;
+        <!-- Indian Cuisine -->
+        <div class="card">
+          <div class="overlay saffron-overlay">
+            <div class="text-content">
+              <h4>Celebrate the Richness of India</h4>
+              <h2>Indian Cuisine</h2>
+              <p>
+                Explore the vibrant and diverse flavors of India with recipes ranging from spicy curries and biryanis to delightful desserts. These dishes promise an unforgettable gastronomic journey!
+              </p>
+
+            </div>
+          </div>
+          <img src="/static/images/indian.jpeg" alt="Indian Cuisine">
+        </div>
+    
+    
+      
+        <!-- Non-Veg Recipes -->
+        <div class="card">
+          <div class="overlay yellow-overlay">
+            <div class="text-content">
+              <h4>Discover Irresistible Non-Veg Recipes</h4>
+              <h2>Non-Veg Recipes</h2>
+              <p>
+                From succulent chicken curries and sizzling kebabs to rich seafood delicacies, explore a world of flavorful non-veg dishes. Perfect for every occasion, these recipes are crafted to satisfy your cravings with easy-to-follow instructions.
+              </p>
+           
+            </div>
+          </div>
+          <img src="/static/images/nonveg.jpg" alt="Non-veg food">
+        </div>
+        &nbsp;
+        <!-- Veg Recipes -->
+        <div class="card">
+          <div class="overlay green-overlay">
+            <div class="text-content">
+              <h4>Delight in Wholesome Veg Recipes</h4>
+              <h2>Veg Recipes</h2>
+              <p>
+                Whether you're craving fresh salads, comforting soups, or hearty main courses, our collection of vegetarian recipes offers a burst of flavors. Healthy, delicious, and perfect for all dietary preferences!
+              </p>
+             
+            </div>
+          </div>
+          <img src="/static/images/veg.jpg" alt="Veg food">
+        </div>
+        &nbsp;
+        <!-- Desserts -->
+        <div class="card">
+          <div class="overlay pink-overlay">
+            <div class="text-content">
+              <h4>Satisfy Your Sweet Tooth</h4>
+              <h2>Desserts</h2>
+              <p>
+                Indulge in our collection of decadent desserts. From creamy cheesecakes and gooey brownies to light and fluffy mousses, there's a sweet treat for every occasion!
+              </p>
+             
+            </div>
+          </div>
+          <img src="/static/images/desserts.jpeg" alt="Desserts">
+        </div>
+        &nbsp;
+        <!-- Healthy Recipes -->
+        <div class="card">
+          <div class="overlay blue-overlay">
+            <div class="text-content">
+              <h4>Fuel Your Body with Nutritious Meals</h4>
+              <h2>Healthy Recipes</h2>
+              <p>
+                Explore a variety of wholesome and nutritious recipes designed to keep you feeling your best. Perfect for fitness enthusiasts or anyone looking for balanced, delicious meals!
+              </p>
+      
+            </div>
+          </div>
+          <img src="/static/images/healthy.jpeg" alt="Healthy Recipes">
+        </div>
+      
+      
+
+
+    </div>
+  </div>
+ 
+ 
+  {% endblock %}

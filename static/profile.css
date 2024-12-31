@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
+  body {
+    min-height: 100%;
+    background-color: #ffffff;
+}
+h1 {
+    letter-spacing: -1px;
+}
+a {
+  color: #fff700f0;
+  text-decoration: none;
+}
+ .alert {
+    color: #721c24; /* Ensure text is visible */
+    background-color: #f8d7da; /* Light red background */
+    border-color: #f5c6cb;
+    padding: 1rem;
+    font-size: 1rem; /* Adjust font size for visibility */
+    display: block;
+    text-align: left;
+    z-index: 10;
+}
+
+.alert-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-left: 0;
+}
+
+.login-root {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.loginbackground {
+    min-height: 692px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.flex-flex {
+    display: flex;
+}
+.align-center {
+  align-items: center; 
+}
+.center-center {
+  align-items: center;
+  justify-content: center;
+}
+.box-root {
+    box-sizing: border-box;
+}
+.flex-direction--column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.loginbackground-gridContainer {
+    display: grid; /* Use standard grid display */
+    grid-template-columns: 
+      [start] 1fr [left-gutter] repeat(16, 86.6px) [right-gutter] 1fr [end]; /* Correct column template */
+    grid-template-rows: 
+      [top] 1fr [top-gutter] repeat(8, 64px) [bottom-gutter] 1fr [bottom]; /* Correct row template */
+    justify-content: center; /* Center the grid horizontally */
+    margin: 0 -2%; /* Margin adjustment */
+    transform: rotate(-12deg) skew(-12deg); /* Apply rotation and skew */
+    z-index: 1;
+  }
+  .box-divider--light-all-2 {
+    box-shadow: inset 0 0 0 2px #e3e8ee;
+}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home - The Kitchen Oracle{% endblock %}
+
+{% block content %}
+
+    
+
+      <div class="card-container2">
+        {% for recipe in recipes %}
+        <div class="card ">
+          <div class="overlay grey-overlay">
+            <div class="text-content recipe-info">
+              
+              <h5 class="card-title">{{ recipe.name }}</h5>
+              <p><strong>Cuisine:</strong> {{ recipe.cuisine }}</p>
+              <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+              <p><strong>Preparation Time:</strong> {{ recipe.prep_time }} minutes</p>
+              <!-- Hidden recipe steps -->
+              <div class="recipe-steps" style="display: none;">
+                <h4>Steps:</h4>
+                <p>{{ recipe.instructions }}</p>
+            </div>
+             
+            </div>
+          </div>
+          <img src="/static/images/{{ recipe.image_url }}" class="card-img-top" alt="{{ recipe.name }}">
+        </div>
+        {% endfor %}
+        </div>
+
+{% endblock %}
